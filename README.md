@@ -17,11 +17,11 @@ This plugin supports the following platforms:
 
 # Installation
 
-`cordova plugin add cordova-plugin-firebase-crashlytics --variable ANDROID_FIREBASE_CORE_VERSION=16.0.0 --save`
+`cordova plugin add cordova-plugin-firebase-crashlytics-fixed --variable ANDROID_FIREBASE_CORE_VERSION=16.0.0 --save`
 
 or
 
-`phonegap plugin add cordova-plugin-firebase-crashlytics --variable ANDROID_FIREBASE_CORE_VERSION=16.0.0`
+`phonegap plugin add cordova-plugin-firebase-crashlytics-fixed --variable ANDROID_FIREBASE_CORE_VERSION=16.0.0`
 
 Omitting `FIREBASE_VERSION` will use a default value.
 
@@ -117,7 +117,7 @@ Set the identifier for the user. Take care when using this method and ensure you
 Support is now included for typescript. Use the following to reference the typescript definitions:
 
 ```
-/// <reference types="cordova-plugin-firebase-crashlytics" />
+/// <reference types="cordova-plugin-firebase-crashlytics-fixed" />
 
 private static crashlytics: FirebaseCrashlytics.FirebaseCrashlytics = FirebaseCrashlytics.initialise();
 crashlytics.logException("my message");
@@ -127,7 +127,7 @@ You may also need to add an external to webpack.config.ls:
 
 ```
   externals: {
-    'cordova-plugin-firebase-crashlytics': "cordova-plugin-firebase-crashlytics"
+    'cordova-plugin-firebase-crashlytics-fixed': "cordova-plugin-firebase-crashlytics-fixed"
     '/exec':"cordova/exec"
   },
 ```
